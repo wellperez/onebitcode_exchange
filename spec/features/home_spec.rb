@@ -10,7 +10,7 @@ RSpec.describe "Exchange Currency Process", :type => :feature do
     end
     click_button 'CONVERTER'
 
-    # save_and_open_page
+    save_and_open_page
     expect(page).to have_content("value")
   end
 end
