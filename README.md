@@ -1,26 +1,24 @@
-# README
+# [One Exchange](https://onexchange.herokuapp.com/)
 
-Push para o heroku.
+[![Codeship Status for codeship/documentation](https://codeship.com/projects/0bdb0440-3af5-0133-00ea-0ebda3a33bf6/status?branch=master)](https://app.codeship.com/projects/216922)
+![ruby](https://img.shields.io/badge/Ruby-2.3.1-red.svg)
+![rails](https://img.shields.io/badge/Rails-5.0.1-red.svg)
+![rails](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Sobre
 
-Things you may want to cover:
+O One Exchange é um app web que permite que usuários de qualquer lugar do mundo possam converter rapidamente seus valores em uma moeda pretendida, podendo ser acessado do desktop ou qualquer outro dispositivo móvel.
 
-* Ruby version
+## Layout da Aplicação
 
-* System dependencies
+![One Exchange](https://raw.githubusercontent.com/wellperez/onebitcode_exchange/master/public/demo.png)
 
-* Configuration
+## Instalação
+* [Docker](https://docs.docker.com/engine/installation/)
 
-* Database creation
+Tenha o Docker instalado e execute os seguintes passos dentro do diretório que foi clonado do GitHub, usando um terminal:
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+docker-compose build
+docker-compose run --rm website rails db:create db:migrate
+```
