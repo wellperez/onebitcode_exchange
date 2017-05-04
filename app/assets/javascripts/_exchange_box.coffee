@@ -24,10 +24,13 @@ $(document).ready ->
 
 
 
-  $('#quantity').on 'change keyup', ->
+  $('#quantity').on 'keyup', ->
     get_count()
 
 
   $('#change-base').click ->
     get_inverse()
+    get_count()
+
+  $('#currency, #currency_destination, #quantity').change ->
     get_count()

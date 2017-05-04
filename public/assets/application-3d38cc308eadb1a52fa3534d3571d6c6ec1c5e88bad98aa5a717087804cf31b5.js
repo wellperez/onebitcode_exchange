@@ -16947,11 +16947,14 @@ var Popover = function ($) {
       $('#currency').val(currencyInverseDestination);
       return $('#currency_destination').val(currencyInverse);
     };
-    $('#quantity').on('change keyup', function() {
+    $('#quantity').on('keyup', function() {
       return get_count();
     });
-    return $('#change-base').click(function() {
+    $('#change-base').click(function() {
       get_inverse();
+      return get_count();
+    });
+    return $('#currency, #currency_destination, #quantity').change(function() {
       return get_count();
     });
   });
